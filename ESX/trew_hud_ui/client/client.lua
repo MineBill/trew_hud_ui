@@ -141,8 +141,8 @@ Citizen.CreateThread(function()
 			end
 
 			-- Vehicle Fuel and Gear
-			local vehicleFuel
-			vehicleFuel = GetVehicleFuelLevel(vehicle)
+			local vehicleFuel = GetVehicleFuelLevel(vehicle)
+			local vehicleFuelCapacity = GetVehicleHandlingFloat(vehicle, "fPetrolTankVolume")
 
 			local vehicleGear = GetVehicleCurrentGear(vehicle)
 
@@ -207,6 +207,7 @@ Citizen.CreateThread(function()
 				nail = vehicleNailSpeed,
 				gear = vehicleGear,
 				fuel = vehicleFuel,
+				fuelCapacity = vehicleFuelCapacity,
 				lights = vehicleIsLightsOn,
 				signals = vehicleSignalIndicator,
 				cruiser = vehicleCruiser,
