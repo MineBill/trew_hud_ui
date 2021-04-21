@@ -142,7 +142,7 @@ Citizen.CreateThread(function()
 
 			-- Vehicle Fuel and Gear
 			local vehicleFuel = GetVehicleFuelLevel(vehicle)
-			local vehicleFuelCapacity = GetVehicleHandlingFloat(vehicle, "fPetrolTankVolume")
+			local vehicleFuelCapacity = GetVehicleHandlingFloat(vehicle, "CHandlingData", "fPetrolTankVolume")
 
 			local vehicleGear = GetVehicleCurrentGear(vehicle)
 
